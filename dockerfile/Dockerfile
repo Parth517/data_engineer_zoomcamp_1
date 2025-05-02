@@ -1,8 +1,8 @@
 FROM python:3.9
 
-RUN pip install pandas
+RUN pip install pandas sqlalchemy psycopg2
 
 WORKDIR /app
 
-COPY pipeline.py pipeline.py
-ENTRYPOINT [ "python","pipeline.py" ]
+COPY Ingesting_NY_data.py Ingesting_NY_data.py
+ENTRYPOINT [ "python","Ingesting_NY_data.py" ]
